@@ -20,10 +20,10 @@ class Hf(object):
         self.sandbox = config['is_sandbox']
         self.symbol_a = config['symbol_a']
         self.symbol_b = config['symbol_b']
-        self.spread_mean = int(config['spread_mean'])
-        self.leverage = config['leverage']
+        self.spread_mean = float(config['spread_mean'])
+        self.leverage = float(config['leverage'])
         self.size = int(config['size'])
-        self.num_param = int(config['num_param'])
+        self.num_param = float(config['num_param'])
         self.trade = Trade(self.api_key, self.api_secret, self.api_passphrase, is_sandbox=self.sandbox)
         self.market = Market(self.api_key, self.api_secret, self.api_passphrase, is_sandbox=self.sandbox)
 
